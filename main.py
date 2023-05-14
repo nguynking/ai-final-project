@@ -12,10 +12,13 @@ def split(txt, seps=(',', ';')):
     else:
         return num_list
 
-demo = gr.Interface(
-    fn=knapsack_backtracking, 
-    inputs=[gr.Textbox(label="Set of values:"), gr.Textbox(label="Set of weights:"), gr.Textbox(label="Max weight:")], 
-    outputs=[gr.Textbox(label="Total value of best set:"), gr.Textbox(label="Best set:")],
-)
-    
-demo.launch()
+def main():
+    demo = gr.Interface(
+        fn=knapsack_backtracking, 
+        inputs=[gr.Textbox(label="Set of values:"), gr.Textbox(label="Set of weights:"), gr.Textbox(label="Max weight:")], 
+        outputs=[gr.Textbox(label="Total value of best set:"), gr.Textbox(label="Best set:")],
+    )
+        
+    demo.launch()
+ if __name__ == "__main__":
+    main()
