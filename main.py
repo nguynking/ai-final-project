@@ -1,4 +1,5 @@
 from model import backtracking
+import gradio as gr
 
 def split(txt, seps=(',', ';')):
     default_sep = seps[0]
@@ -14,7 +15,7 @@ def split(txt, seps=(',', ';')):
 
 def main():
     demo = gr.Interface(
-        fn=knapsack_backtracking, 
+        fn=backtracking, 
         inputs=[gr.Textbox(label="Set of values:"), gr.Textbox(label="Set of weights:"), gr.Textbox(label="Max weight:")], 
         outputs=[gr.Textbox(label="Total value of best set:"), gr.Textbox(label="Best set:")],
     )
