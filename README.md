@@ -1,2 +1,2 @@
-# ai-final-project
-Solving Knapsack Problem using Backtracking Algorithm
+# AI course's final project
+A gradio's interface solving Knapsack problem using backtracking algorithm
