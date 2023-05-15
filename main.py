@@ -1,4 +1,3 @@
-from model import backtracking
 import gradio as gr
 
 def split(txt, seps=(',', ';')):
@@ -7,7 +6,7 @@ def split(txt, seps=(',', ';')):
     # we skip seps[0] because that's the default separator
     for sep in seps[1:]:
         txt = txt.replace(sep, default_sep)
-    num_list = [int(i.strip()) for i in txt.split(default_sep)]
+    num_list = [float(i.strip()) for i in txt.split(default_sep)]
     if len(num_list) == 1:
         return num_list[0]
     else:
